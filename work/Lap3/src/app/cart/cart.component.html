@@ -1,0 +1,8 @@
+<div *ngIf = "items.length > 0">
+<p *ngFor="let itl of items; index as i">
+    Item No. {{ i+1 }} {{ itl.name }} {{ itl.price | currency: "THB " }} x {{ itl.amount }}
+    <button mat-fab color="primary" (click)="clearItem(itl.id)"><mat-icon>delete</mat-icon></button></p>
+<p>{{ total | currency: "THB " }}</p>
+<button mat-raised-button color="warn" (click)="clearCart()">Clear All</button>&nbsp;
+<button mat-raised-button color="primary">Checkout</button>
+</div>
